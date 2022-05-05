@@ -102,7 +102,6 @@ Here are 6 demo GIF each of which acccounts for different scenario and shows som
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 
    &emsp;  Among a couple of challenges including setting up the countdown timer with a progress bar and floating element to right without changing other elements’ location, it was most difficult to manage the timing of activating hovering effect over the start-button.
 
