@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Light and Sound Memory Game</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <!-- import jquery for toggle button animation-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <h1>💡Light and Sound Memory Game🔊</h1>
+    <p class="tab">
+      Welcome to the game! <br />
+      Click on
+      <span class="buttonText">"Start"</span>
+      to begin the game or
+      <span class="buttonText">"Help"</span> to check the rule.
+    </p>
+
+    <button
+      id="startBtn"
+      class="tab animation"
+      onclick="startGame()"
+      onmouseleave="addHoverAnimation()"
+    >
+      Start
+    </button>
+    <button id="endBtn" class="hidden tab" onclick="endGame()">End</button>
+
+    <div id="countDown">
+      <p id="timeText" class="buttonText">Remaining Time: -- s</p>
+      <div id="timeLimit">
+        <div id="progress"></div>
+      </div>
+    </div>
+
+    <div id="helpBtn" class="helpBtn tab">
+      <b>Help</b> <span class="arrow"></span>
+    </div>
+
+    <div id="playGuide" class="hidden" style="text-align: left">
+      1. Click <span style="font-weight: bold">"Start"</span> Button. <br />
+      2. Remember the order of buttons lighted up. <br />
+      3. Press the buttons in that order wihtin the time limit. <br />
+      4. Each round, the number of displayed buttons increments by 1. <br />
+      5. You'll win if you tap the buttons in the correct order in all 8 rounds
+      with less than 3 mistakes, and lose otherwise. <br />
+    </div>
+
+    <div class="tab" id="gameButtonArea">
+      <audio
+        id="birdAudio"
+        src="https://cdn.glitch.global/6d9beae2-285f-4734-a8aa-bece93e8201a/bird.mp3?v=1648116424662"
+      ></audio>
+      <button
+        id="button1"
+        onclick="guess(1)"
+        onmousedown="startTone(1)"
+        onmouseup="stopTone(1)"
+      ></button>
+      <audio
+        id="jungleAudio"
+        src="https://cdn.glitch.global/6d9beae2-285f-4734-a8aa-bece93e8201a/jungle.mp3?v=1648116544501"
+      ></audio>
+      <button
+        id="button2"
+        onclick="guess(2)"
+        onmousedown="startTone(2)"
+        onmouseup="stopTone(2)"
+      ></button>
+      <audio
+        id="oceanAudio"
+        src="https://cdn.glitch.global/6d9beae2-285f-4734-a8aa-bece93e8201a/ocean.mp3?v=1648116571108"
+      ></audio>
+      <button
+        id="button3"
+        onclick="guess(3)"
+        onmousedown="startTone(3)"
+        onmouseup="stopTone(3)"
+      ></button>
+      <audio
+        id="windAudio"
+        src="https://cdn.glitch.global/6d9beae2-285f-4734-a8aa-bece93e8201a/wind.mp3?v=1648120401965"
+      ></audio>
+      <button
+        id="button4"
+        onclick="guess(4)"
+        onmousedown="startTone(4)"
+        onmouseup="stopTone(4)"
+      ></button>
+      <audio
+        id="rainAudio"
+        src="https://cdn.glitch.global/6d9beae2-285f-4734-a8aa-bece93e8201a/rain.mp3?v=1648120379313"
+      ></audio>
+      <button
+        id="button5"
+        onclick="guess(5)"
+        onmousedown="startTone(5)"
+        onmouseup="stopTone(5)"
+      ></button>
+    </div>
+  </body>
+
+  <script
+    type="text/javascript"
+    src="http://code.jquery.com/jquery-3.2.1.min.js"
+  ></script>
+</html>

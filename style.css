@@ -1,0 +1,274 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.tab {
+  margin-left: 40px;
+}
+
+.clickDisabled {
+  pointer-events: none;
+}
+
+/* 以下が追加：adjust typography defaults */
+body {
+  margin: 2em;
+  font-family: verdana, arial, sans-serif;
+  line-height: 1.5;
+  background-color: #fbfaf0;
+  color: black;
+}
+
+h1 {
+  font-family: verdana, arial, sans-serif;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-color: #fbfaf0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Courier New", Garamond, helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  float: left;
+}
+
+.buttonText {
+  font-weight: bold;
+  font-family: "Courier New", Garamond, helvetica, arial, sans-serif;
+}
+
+#startBtn.animation:hover {
+  background-image: url("https://cdn.glitch.global/6d9beae2-285f-4734-a8aa-bece93e8201a/game%20play.gif?v=1648041442703");
+  background-size: 500%;
+  color: white;
+}
+
+#startBtn.noAnimation:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+#endBtn {
+  /* just a black picture */
+  /* to fulfill the optional requirement of using image as background */
+  background-image: url("https://cdn.glitch.global/6d9beae2-285f-4734-a8aa-bece93e8201a/black.jpg?v=1648044503765");
+  color: white;
+}
+
+#playGuide {
+  width: 92%;
+  margin-right: 0px;
+  margin-left: 44px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 6px;
+  padding-right: 0px;
+  border-left: 4px solid #495371;
+  background-color: #f0f0f0;
+  /* except for the top left corner, make the round corner */
+  border-radius: 3px;
+  border-top-left-radius: 0px;
+}
+
+.helpBtn {
+  clear: both;
+  position: relative;
+  color: black;
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin-left: 44px;
+  border-left: 4px solid #495371;
+  padding-top: 8px;
+  padding-left: 7px;
+  font-size: 16px;
+  font-family: "Courier New", Garamond, helvetica, arial, sans-serif;
+}
+
+.arrow {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.arrow::before,
+.arrow::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 0.8px;
+  width: 12px;
+  background: black;
+  transition: 0.2s;
+}
+
+.arrow::before {
+  right: 1px;
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  right: -7.5px;
+  transform: rotate(-45deg);
+}
+
+.helpBtn.active {
+  background-color: #495371;
+  color: white;
+
+  /* except for the left buttom, make the round corner */
+  border-radius: 3px;
+  border-bottom-left-radius: 0px;
+}
+
+.helpBtn.active .arrow::before {
+  position: absolute;
+  background-color: white;
+  content: "";
+  right: -7.5px;
+  width: 18px;
+  transition: 0.2s;
+}
+
+.helpBtn.active .arrow::after {
+  position: absolute;
+  background-color: white;
+  content: "";
+  width: 18px;
+  transition: 0.2s;
+}
+
+#countDown {
+  float: right;
+  margin-bottom: 2px;
+  margin-right: 45px;
+}
+
+#timeText {
+  height: 10px;
+  color: black;
+}
+
+#timeLimit {
+  width: 150px;
+  height: 30px;
+  margin-left: 40px;
+  background-color: #ebebeb;
+  border-radius: 3px;
+  border: 1.5px solid #495371;
+  position: relative;
+}
+
+#progress {
+  background-color: #4caf50;
+  width: 0%;
+  position: absolute;
+  height: 27px;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+/* adjust the margin later */
+#gameButtonArea > button {
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  margin: 5px;
+}
+
+/*null state*/
+#button1 {
+  background: lightgreen;
+}
+
+#button2 {
+  background: lightblue;
+}
+
+#button3 {
+  background: pink;
+}
+
+#button4 {
+  background: #fdffa9;
+}
+
+#button5 {
+  background: #dcdcdc;
+}
+
+/*when mouse hovers over the button, it lights up*/
+/*signifies each user to press it*/
+#button1:hover {
+  background: #1fc600;
+}
+
+#button2:hover {
+  background: #5588ff;
+}
+
+#button3:hover {
+  background: #fd6969;
+}
+
+#button4:hover {
+  background: #ffee58;
+}
+
+#button5:hover {
+  background: #c0c0c0;
+}
+
+/*when pressed, each button lights up*/
+#button1:active,
+#button1.lit {
+  background: green;
+}
+
+#button2:active,
+#button2.lit {
+  background: blue;
+}
+
+#button3:active,
+#button3.lit {
+  background: red;
+}
+
+#button4:active,
+#button4.lit {
+  background: yellow;
+}
+
+#button5:active,
+#button5.lit {
+  background: gray;
+}
