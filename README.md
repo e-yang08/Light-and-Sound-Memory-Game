@@ -1,7 +1,7 @@
 # Light-and-Sound-Memory-Game
 It is part of pre-work for CodePath's SITE Program application, which I eventually did not apply for. 
 
-Link to project: [https://glitch.com/edit/#!/telling-coral-income](https://glitch.com/edit/#!/telling-coral-income)
+Link to project: [https://telling-coral-income.glitch.me](https://telling-coral-income.glitch.me)
 
 ## Required Functionality
 
